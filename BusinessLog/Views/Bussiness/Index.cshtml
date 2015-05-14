@@ -1,0 +1,123 @@
+﻿@model IEnumerable<BusinessLog.Models.CleMonReportN>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.廢棄物來源是否為事業單位)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.委託單位名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.委託單位證號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.委託單位地址)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.縣市別代碼)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.行業別代碼)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.六聯單單號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.廢棄物編號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.清除量)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.清除日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.清除方法)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.貯存地點)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.中間或最終處置地點代碼)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.中間或最終處置到達日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.清運_x0028_除_x0029_機具車號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.清運_x0028_除_x0029_機具拖車車尾車號)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.廢棄物來源是否為事業單位)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.委託單位名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.委託單位證號)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.委託單位地址)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.縣市別代碼)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.行業別代碼)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.六聯單單號)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.廢棄物編號)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.清除量)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.清除日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.清除方法)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.貯存地點)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.中間或最終處置地點代碼)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.中間或最終處置到達日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.清運_x0028_除_x0029_機具車號)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.清運_x0028_除_x0029_機具拖車車尾車號)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RowIndex }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RowIndex }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RowIndex })
+        </td>
+    </tr>
+}
+
+</table>
