@@ -13,6 +13,10 @@ namespace BusinessLog.Controllers
     public class BussinessController : Controller
     {
         private FuBrotherEntities db = new FuBrotherEntities();
+        CleMonReportNRepository repo = RepositoryHelper.GetCleMonReportNRepository();
+
+   
+
 
         // GET: Bussiness
         public ActionResult Index()
