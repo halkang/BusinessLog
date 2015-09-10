@@ -31,5 +31,7 @@ namespace BusinessLog.Models
         public System.DateTime 中間或最終處置到達日期 { get; set; }
         public string 清運_x0028_除_x0029_機具車號 { get; set; }
         public string 清運_x0028_除_x0029_機具拖車車尾車號 { get; set; }
+		public string RowStatus { get; set; }
+
     }
 }

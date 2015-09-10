@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FuBrotherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FuBrotherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CleMonReportN">
           <Key>
             <PropertyRef Name="RowIndex" />
@@ -26,12 +26,12 @@
           <Property Name="中間或最終處置到達日期" Type="datetime" Nullable="false" />
           <Property Name="清運_x0028_除_x0029_機具車號" Type="char" MaxLength="8" Nullable="false" />
           <Property Name="清運_x0028_除_x0029_機具拖車車尾車號" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="RowStatus" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
         <EntityContainer Name="FuBrotherModelStoreContainer">
           <EntitySet Name="CleMonReportN" EntityType="Self.CleMonReportN" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FuBrotherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -56,6 +56,7 @@
           <Property Name="中間或最終處置到達日期" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="清運_x0028_除_x0029_機具車號" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="清運_x0028_除_x0029_機具拖車車尾車號" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="RowStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" DefaultValue="''" />
         </EntityType>
         <EntityContainer Name="FuBrotherEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CleMonReportN" EntityType="Self.CleMonReportN" />
@@ -69,6 +70,7 @@
           <EntitySetMapping Name="CleMonReportN">
             <EntityTypeMapping TypeName="FuBrotherModel.CleMonReportN">
               <MappingFragment StoreEntitySet="CleMonReportN">
+                <ScalarProperty Name="RowStatus" ColumnName="RowStatus" />
                 <ScalarProperty Name="RowIndex" ColumnName="RowIndex" />
                 <ScalarProperty Name="廢棄物來源是否為事業單位" ColumnName="廢棄物來源是否為事業單位" />
                 <ScalarProperty Name="委託單位名稱" ColumnName="委託單位名稱" />

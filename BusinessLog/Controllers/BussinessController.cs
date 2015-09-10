@@ -50,12 +50,21 @@ namespace BusinessLog.Controllers
         // 詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RowIndex,廢棄物來源是否為事業單位,委託單位名稱,委託單位證號,委託單位地址,縣市別代碼,行業別代碼,六聯單單號,廢棄物編號,清除量,清除日期,清除方法,貯存地點,中間或最終處置地點代碼,中間或最終處置到達日期,清運_x0028_除_x0029_機具車號,清運_x0028_除_x0029_機具拖車車尾車號")] CleMonReportN cleMonReportN)
+		public ActionResult Create([Bind(Include = "RowIndex,廢棄物來源是否為事業單位,委託單位名稱,委託單位證號,委託單位地址,縣市別代碼,行業別代碼,六聯單單號,廢棄物編號,清除量,清除日期,清除方法,貯存地點,中間或最終處置地點代碼,中間或最終處置到達日期,清運_x0028_除_x0029_機具車號,清運_x0028_除_x0029_機具拖車車尾車號,RowStatus")] CleMonReportN cleMonReportN)
         {
             if (ModelState.IsValid)
             {
-                db.CleMonReportN.Add(cleMonReportN);
-                db.SaveChanges();
+				//db.CleMonReportN.Add(cleMonReportN);
+				//db.SaveChanges();
+				//cleMonReportN.RowStatus = "J";
+
+				
+				repo.Add(cleMonReportN);
+				repo.UnitOfWork.Commit();
+
+
+				
+                
                 return RedirectToAction("Index");
             }
 

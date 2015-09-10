@@ -171,8 +171,16 @@
     <Compile Include="Models\CleMonReportN.cs">
       <DependentUpon>ModelBusiness.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CleMonReportN.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CleMonReportNRepository.cs">
       <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFGeneratePartialClass.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EFRepository.cs">
       <DependentUpon>IRepository.EF6.tt</DependentUpon>
@@ -243,6 +251,10 @@
     <Content Include="Models\IRepository.EF6.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IRepository.EF6.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EFGeneratePartialClass.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFGeneratePartialClass.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
