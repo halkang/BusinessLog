@@ -2,6 +2,11 @@
 
 @{
     ViewBag.Title = "Create";
+    if (TempData["notice"] != null)
+    {
+        <p>@TempData["notice"]</p>
+    }
+
 }
 
 <h2>Create</h2>
@@ -32,12 +37,12 @@
         </div>
 
         @*<div class="form-group">
-            @Html.LabelFor(model => model.委託單位證號, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.委託單位證號, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.委託單位證號, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
+                @Html.LabelFor(model => model.委託單位證號, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.委託單位證號, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.委託單位證號, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
         <div class="form-group">
             @Html.LabelFor(model => model.委託單位地址, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -55,29 +60,29 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.行業別代碼, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.行業別代碼, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.行業別代碼, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.六聯單單號, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.六聯單單號, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.六聯單單號, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.廢棄物編號, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.廢棄物編號, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.廢棄物編號, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group">
             @Html.LabelFor(model => model.清除量, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -95,53 +100,53 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.清除方法, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.清除方法, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.清除方法, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.貯存地點, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.貯存地點, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.貯存地點, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.中間或最終處置地點代碼, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.中間或最終處置地點代碼, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.中間或最終處置地點代碼, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.中間或最終處置到達日期, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.中間或最終處置到達日期, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.中間或最終處置到達日期, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.清運_x0028_除_x0029_機具車號, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.清運_x0028_除_x0029_機具車號, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.清運_x0028_除_x0029_機具車號, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.清運_x0028_除_x0029_機具拖車車尾車號, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.清運_x0028_除_x0029_機具拖車車尾車號, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.清運_x0028_除_x0029_機具拖車車尾車號, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
         @*<div class="form-group">
                 @Html.LabelFor(model => model.RowStatus, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">

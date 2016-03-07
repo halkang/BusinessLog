@@ -15,6 +15,16 @@ namespace BusinessLog.Models
             RowStatus = "Y";
             廢棄物來源是否為事業單位 = "0";
             委託單位證號 = string.Empty;
+            委託單位地址 = string.Empty;
+            行業別代碼 = string.Empty;
+            六聯單單號 = string.Empty;
+            廢棄物編號 = 9301;
+            清除方法 = "(1)小貨車 (2)無經轉運";
+            貯存地點 = "無貯存";
+            中間或最終處置地點代碼 = "C16A0203";
+            清運_x0028_除_x0029_機具車號 = "009-TW";
+            清運_x0028_除_x0029_機具拖車車尾車號 = string.Empty;
+
         }
     }
 
@@ -36,7 +46,7 @@ namespace BusinessLog.Models
         public string 委託單位證號 { get; set; }
 
         [StringLength(120, ErrorMessage = "欄位長度不得大於 120 個字元")]
-        [Required]
+        [Required(AllowEmptyStrings = true)]
         public string 委託單位地址 { get; set; }
 
         [StringLength(255, ErrorMessage = "欄位長度不得大於 255 個字元")]
@@ -44,11 +54,11 @@ namespace BusinessLog.Models
         public string 縣市別代碼 { get; set; }
 
         [StringLength(4, ErrorMessage = "欄位長度不得大於 4 個字元")]
-        [Required]
+        [Required(AllowEmptyStrings = true)]
         public string 行業別代碼 { get; set; }
 
         [StringLength(15, ErrorMessage = "欄位長度不得大於 15 個字元")]
-        [Required]
+        [Required(AllowEmptyStrings = true)]
         public string 六聯單單號 { get; set; }
         [Required]
         public int 廢棄物編號 { get; set; }
@@ -69,14 +79,21 @@ namespace BusinessLog.Models
         [Required]
         public string 中間或最終處置地點代碼 { get; set; }
         [Required]
-        public System.DateTime 中間或最終處置到達日期 { get; set; }
+        public System.DateTime 中間或最終處置到達日期
+        {
+            get { return 中間或最終處置到達日期; }
+            set { 中間或最終處置到達日期 = 清除日期; }
+        }
+
+
+
 
         [StringLength(8, ErrorMessage = "欄位長度不得大於 8 個字元")]
         [Required]
         public string 清運_x0028_除_x0029_機具車號 { get; set; }
 
         [StringLength(8, ErrorMessage = "欄位長度不得大於 8 個字元")]
-        [Required]
+        [Required(AllowEmptyStrings = true)]
         public string 清運_x0028_除_x0029_機具拖車車尾車號 { get; set; }
 
         [StringLength(1, ErrorMessage = "欄位長度不得大於 1 個字元")]

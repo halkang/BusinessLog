@@ -11,17 +11,17 @@
           </Key>
           <Property Name="RowIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="廢棄物來源是否為事業單位" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="委託單位名稱" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="委託單位名稱" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="委託單位證號" Type="char" MaxLength="60" Nullable="false" />
-          <Property Name="委託單位地址" Type="char" MaxLength="120" Nullable="false" />
+          <Property Name="委託單位地址" Type="nvarchar" MaxLength="120" Nullable="false" />
           <Property Name="縣市別代碼" Type="char" MaxLength="255" Nullable="false" />
           <Property Name="行業別代碼" Type="char" MaxLength="4" Nullable="false" />
           <Property Name="六聯單單號" Type="char" MaxLength="15" Nullable="false" />
           <Property Name="廢棄物編號" Type="int" Nullable="false" />
           <Property Name="清除量" Type="real" Nullable="false" />
           <Property Name="清除日期" Type="datetime" Nullable="false" />
-          <Property Name="清除方法" Type="char" MaxLength="70" Nullable="false" />
-          <Property Name="貯存地點" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="清除方法" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="貯存地點" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="中間或最終處置地點代碼" Type="char" MaxLength="255" Nullable="false" />
           <Property Name="中間或最終處置到達日期" Type="datetime" Nullable="false" />
           <Property Name="清運_x0028_除_x0029_機具車號" Type="char" MaxLength="8" Nullable="false" />
@@ -41,17 +41,17 @@
           </Key>
           <Property Name="RowIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="廢棄物來源是否為事業單位" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="委託單位名稱" Type="String" MaxLength="70" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="委託單位名稱" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="委託單位證號" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="委託單位地址" Type="String" MaxLength="120" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="委託單位地址" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="縣市別代碼" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="行業別代碼" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="六聯單單號" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="廢棄物編號" Type="Int32" Nullable="false" />
           <Property Name="清除量" Type="Single" Nullable="false" />
           <Property Name="清除日期" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="清除方法" Type="String" MaxLength="70" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="貯存地點" Type="String" MaxLength="70" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="清除方法" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="貯存地點" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="中間或最終處置地點代碼" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="中間或最終處置到達日期" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="清運_x0028_除_x0029_機具車號" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />

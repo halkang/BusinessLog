@@ -15,8 +15,12 @@ namespace BusinessLog.Controllers
         private FuBrotherEntities db = new FuBrotherEntities();
         CleMonReportNRepository repo = RepositoryHelper.GetCleMonReportNRepository();
 
-   
 
+        // GET: Bussiness/Create
+        public ActionResult Export()
+        {
+            return View();
+        }
 
         // GET: Bussiness
         public ActionResult Index()
@@ -54,18 +58,18 @@ namespace BusinessLog.Controllers
         {
             if (ModelState.IsValid)
             {
-				//db.CleMonReportN.Add(cleMonReportN);
-				//db.SaveChanges();
-				//cleMonReportN.RowStatus = "J";
+                //db.CleMonReportN.Add(cleMonReportN);
+                //db.SaveChanges();
+                //cleMonReportN.RowStatus = "J";
 
-				
+                cleMonReportN.中間或最終處置到達日期 = cleMonReportN.清除日期;
 				repo.Add(cleMonReportN);
 				repo.UnitOfWork.Commit();
 
+                TempData["notice"] = "Successfully registered";
+             
 
-				
-                
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(cleMonReportN);
